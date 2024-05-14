@@ -1,4 +1,4 @@
-﻿namespace b_editor
+namespace b_editor
 {
         partial class Form1
     {
@@ -61,10 +61,10 @@
             this.toolStrip_fontType = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip_fontSize = new System.Windows.Forms.ToolStripComboBox();
             this.toolStrip_BGColor = new System.Windows.Forms.ToolStripButton();
-            this.toolStrip_textColor = new System.Windows.Forms.ToolStripButton();
+            this.menu_textColor = new System.Windows.Forms.ToolStripButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.txtEdit = new System.Windows.Forms.TextBox();
+            this.txtEdit = new System.Windows.Forms.RichTextBox();
             this.panel_sidebar.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.toolStrip1.SuspendLayout();
@@ -286,7 +286,7 @@
             this.toolStrip_fontType,
             this.toolStrip_fontSize,
             this.toolStrip_BGColor,
-            this.toolStrip_textColor});
+            this.menu_textColor});
             this.toolStrip1.Location = new System.Drawing.Point(222, 33);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(850, 34);
@@ -349,22 +349,23 @@
             this.toolStrip_BGColor.Size = new System.Drawing.Size(83, 29);
             this.toolStrip_BGColor.Text = "BGColor";
             // 
-            // toolStrip_textColor
+            // menu_textColor
             // 
-            this.toolStrip_textColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStrip_textColor.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStrip_textColor.Name = "toolStrip_textColor";
-            this.toolStrip_textColor.Size = new System.Drawing.Size(93, 29);
-            this.toolStrip_textColor.Text = "TextColor";
+            this.menu_textColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.menu_textColor.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.menu_textColor.Name = "menu_textColor";
+            this.menu_textColor.Size = new System.Drawing.Size(93, 29);
+            this.menu_textColor.Text = "TextColor";
+            this.menu_textColor.Click += new System.EventHandler(this.menu_textColor_Click);
             // 
             // txtEdit
             // 
             this.txtEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtEdit.Location = new System.Drawing.Point(222, 67);
-            this.txtEdit.Multiline = true;
             this.txtEdit.Name = "txtEdit";
             this.txtEdit.Size = new System.Drawing.Size(850, 497);
-            this.txtEdit.TabIndex = 4;
+            this.txtEdit.TabIndex = 5;
+            this.txtEdit.Text = "";
             // 
             // Form1
             // 
@@ -425,9 +426,9 @@
         private ToolStripComboBox toolStrip_fontSize;
         private ToolStripButton toolStrip_BGColor;
         private ColorDialog colorDialog1;
-        private ToolStripButton toolStrip_textColor;
+        private ToolStripButton menu_textColor;
         private FontDialog fontDialog1;
         private ToolStripMenuItem menu_connect;
-        private TextBox txtEdit;
+        private RichTextBox txtEdit;
     }
 }

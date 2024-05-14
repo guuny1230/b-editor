@@ -1,4 +1,4 @@
-﻿namespace b_editor
+namespace b_editor
 {
     public partial class Form1 : Form
     {
@@ -24,6 +24,22 @@
         {
             {
                 txtEdit.Paste();
+            }
+        }
+
+        private void menu_textColor_Click(object sender, EventArgs e)
+        {
+            int selectionStart = txtEdit.SelectionStart;
+            int selectionLength = txtEdit.SelectionLength;
+
+            ColorDialog colorDialog = new ColorDialog();
+            if (colorDialog.ShowDialog() == DialogResult.OK)
+            {
+
+                txtEdit.SelectionStart = selectionStart;
+                txtEdit.SelectionLength = selectionLength;
+                txtEdit.SelectionColor = colorDialog.Color;
+                txtEdit.SelectionLength = 0;
             }
         }
 
